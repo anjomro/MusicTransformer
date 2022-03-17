@@ -83,7 +83,7 @@ for e in range(config.epochs):
             batch_x, batch_y = dataset.slide_seq2seq_batch(config.batch_size, config.max_seq)
             batch_x = torch.from_numpy(batch_x).contiguous().to(config.device, non_blocking=True, dtype=torch.int)
             batch_y = torch.from_numpy(batch_y).contiguous().to(config.device, non_blocking=True, dtype=torch.int)
-        except IndexError:
+        except:
             continue
 
         start_time = time.time()
@@ -91,6 +91,7 @@ for e in range(config.epochs):
         sample = mt.forward(batch_x)
         metrics = metric_set(sample, batch_y)
         loss = metrics['loss']
+        print(loss)
         loss.backward()
         scheduler.step()
         end_time = time.time()

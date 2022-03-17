@@ -6,6 +6,8 @@
 #SBATCH --gres=gpu:1
 #SBATCH --time=2-00:00:00
 
+source ~/miniconda3/etc/profile.d/conda.sh
 source ~/miniconda3/bin/activate
 conda activate tfg
-python3 train.py
+module load conda/4.9
+python3 train.py -c config/train.yml config/base.yml  -m dataset/
