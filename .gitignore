@@ -3,7 +3,7 @@ data
 
 *.midi
 *.MID
-*.pickle
+#*.pickle
 *__pycache__
 *.idea
 
