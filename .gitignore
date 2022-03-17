@@ -1,14 +1,14 @@
 testdata
 data
 
-*.midi
-*.MID
+#*.midi
+#*.MID
 #*.pickle
 *__pycache__
 *.idea
 
 bin/
-dataset/
+#dataset/
 result/
 model/
 logs/
