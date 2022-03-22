@@ -1,13 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=musicgen
-#SBATCH -p veu
+#SBATCH --job-name=gansformer
 #SBATCH --mem=20G
-#SBATCH --cpus-per-task=2
-#SBATCH --gres=gpu:1
-#SBATCH --time=2-00:00:00
-
-source ~/miniconda3/etc/profile.d/conda.sh
-source ~/miniconda3/bin/activate
-conda activate tfg
-module load conda/4.9
-python3 train.py -c config/train.yml config/base.yml  -m dataset/
+#SBATCH -c1
+#SBATCH --gres=gpu:1,gpumem:16G
+#SBATCH -t 1-00:00
+python3 train.py -c config/train.yml config/base.yml -m dataset/

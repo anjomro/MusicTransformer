@@ -17,7 +17,9 @@ def find_files_by_extensions(root, exts=[]):
                 return True
         return False
     for path, _, files in os.walk(root):
+        print(path)
         for name in files:
+            print(name)
             if _has_ext(name):
                 yield os.path.join(path, name)
 
