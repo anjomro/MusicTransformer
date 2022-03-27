@@ -1,0 +1,26 @@
+None
+CONFIG_FILE_NAME = save.yml
+batch_size = 8
+condition_file = None
+debug = true
+device = cuda
+dropout = 0.1
+embedding_dim = 256
+epochs = 1000
+event_dim = 388
+experiment = embedding256-layer6
+fp16 = None
+l_r = 0.001
+label_smooth = 0.1
+length = 4000
+load_path = None
+max_seq = 2048
+num_layers = 6
+pad_token = 388
+pickle_dir = ../MusicTransformer/dataset/processed
+save_path = /home/usuaris/imatge/pau.lozano/tfg/PauTransformer/MusicTransformer-pytorch/generations/generated.mid
+threshold_len = 500
+token_eos = 390
+token_sos = 389
+vocab_size = 391
+4000
