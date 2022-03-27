@@ -73,7 +73,7 @@ class Config:
         if not os.path.exists(model_dir):
             os.makedirs(model_dir)
         config_yml = yaml.dump(self.dict, default_flow_style=False)
-        with open(os.path.join(model_dir, self.CONFIG_FILE_NAME), "w+") as f:
+        with open(os.path.join("dataset/", self.CONFIG_FILE_NAME), "w+") as f:
             f.write(config_yml)
 
     def __repr__(self):
