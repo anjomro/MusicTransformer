@@ -32,7 +32,7 @@ class Config:
         return self.dict[key]
 
     def load(self, model_dir, configs, initialize=False, print=True):
-        save_config_file = os.path.join(model_dir, self.CONFIG_FILE_NAME)
+        save_config_file = os.path.join("dataset/", self.CONFIG_FILE_NAME)
         if os.path.exists(save_config_file):
             configs = [save_config_file] + configs
         elif not initialize:
