@@ -43,8 +43,11 @@ if config.condition_file is not None:
     inputs = np.array([encode_midi('dataset/midi/BENABD10.mid')[:500]])
 else:
     inputs = np.array([[24, 28, 31]])
+print("loading_inputs")
 inputs = torch.from_numpy(inputs)
+print("about to predict")
 result = mt(inputs, config.length, gen_summary_writer)
+print("generation finished:")
 
 for i in result:
     print(i)
