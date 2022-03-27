@@ -1,4 +1,5 @@
-save_path: 'bin/generated.mid'
+save_path: '/home/usuaris/imatge/pau.lozano/tfg/PauTransformer/MusicTransformer-pytorch/generations/generated.mid'
+#save_path: '/generations/generated.mid'
 condition_file:
 length: 4000
 threshold_len: 500
