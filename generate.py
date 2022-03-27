@@ -38,12 +38,10 @@ mt = MusicTransformer(
 mt.load_state_dict(torch.load(args.model_dir))
 mt.test()
 
-print("about to print configs")
 print(config.condition_file)
 if config.condition_file is not None:
-    inputs = np.array([encode_midi('dataset/midi/BENABD10.mid')[:500]])
-else:
-    inputs = np.array([[24, 28, 31]])
+    inputs = np.array([encode_midi(config.condition_file)[:500]])
+
 print("loading_inputs")
 inputs = torch.from_numpy(inputs)
 print("about to predict")
