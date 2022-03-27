@@ -38,6 +38,7 @@ mt = MusicTransformer(
 mt.load_state_dict(torch.load(args.model_dir))
 mt.test()
 
+print("about to print configs")
 print(config.condition_file)
 if config.condition_file is not None:
     inputs = np.array([encode_midi('dataset/midi/BENABD10.mid')[:500]])
@@ -50,6 +51,7 @@ result = mt(inputs, config.length, gen_summary_writer)
 print("generation finished:")
 
 for i in result:
+    print("test, sorry")
     print(i)
 
 decode_midi(result, file_path=config.save_path)
