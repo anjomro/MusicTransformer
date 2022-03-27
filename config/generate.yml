@@ -1,5 +1,5 @@
 save_path: '/home/usuaris/imatge/pau.lozano/tfg/PauTransformer/MusicTransformer-pytorch/generations/generated.mid'
 #save_path: '/generations/generated.mid'
-condition_file: '/home/usuaris/imatge/pau.lozano/tfg/PauTransformer/MusicTransformer-pytorch/dataset/maestro/MIDI-UNPROCESSED_01-03_R1_2014_MID--AUDIO_01_R1_2014_wav--1.midi'
+condition_file: '/home/usuaris/imatge/pau.lozano/tfg/PauTransformer/MusicTransformer-pytorch/dataset/maestro/MIDI-Unprocessed_057_PIANO057_MID--AUDIO-split_07-07-17_Piano-e_1-07_wav--4.midi'
 length: 4000
 threshold_len: 500
