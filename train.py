@@ -47,7 +47,7 @@ mt.to(config.device)
 opt = optim.Adam(mt.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9)
 scheduler = CustomSchedule(config.embedding_dim, optimizer=opt)
 
-mt.load_state_dict(torch.load())
+mt.load_state_dict(torch.load('/home/usuaris/imatge/pau.lozano/tfg/PauTransformer/MusicTransformer-pytorch/train-799.pth'))
 # multi-GPU set
 if torch.cuda.device_count() > 1:
     single_mt = mt

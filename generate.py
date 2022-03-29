@@ -5,7 +5,6 @@ from custom.config import config
 from model import MusicTransformer
 from data import Data
 import utils
-import time
 from midi_processor.processor import decode_midi, encode_midi
 
 import datetime
@@ -36,9 +35,7 @@ mt = MusicTransformer(
     max_seq=config.max_seq,
     dropout=0,
     debug=False)
-start_time = time.time()
 mt.load_state_dict(torch.load(args.model_dir))
-print(time.time() - start_time)
 mt.test()
 
 print(config.condition_file)
