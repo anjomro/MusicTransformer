@@ -2,7 +2,7 @@ mkdir dataset
 mkdir dataset/processed
 mkdir model_dir
 
-pip install -requirements.txt
+pip install -r requirements.txt
 
 sh scrape.sh dataset
 python preprocess.py dataset dataset/processed
