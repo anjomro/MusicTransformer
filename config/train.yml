@@ -1,4 +1,4 @@
-pickle_dir: '/home/usuaris/imatge/pau.lozano/tfg/PauTransformer/MusicTransformer-pytorch/dataset/maestropr'
+pickle_dir: './dataset/processed'
 epochs: 1000
 batch_size: 8
 load_path:
